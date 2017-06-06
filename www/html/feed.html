@@ -1,8 +1,12 @@
 <ion-view>
-  <ion-nav-title>
-    <h1 class="title">Feed</h1>
-  </ion-nav-title>
+  <ion-nav-title>{{ feed.title }}</ion-nav-title>
   <ion-content>
-    <p class="padding">The feed URL is {{ feedUrl }}</p>
+    <ion-refresher pulling-text="Refresh Feed..." on-refresh="refreshFeed()" spinner="ripple"></ion-refresher>
+    <div class="list">
+      <a class="item item-icon-right" href="#" ng-repeat="item in items">
+        <h2>{{ item.title }}</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </a>
+    </div>
   </ion-content>
 </ion-view>
