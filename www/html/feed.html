@@ -3,7 +3,7 @@
   <ion-content>
     <ion-refresher pulling-text="Refresh Feed..." on-refresh="refreshFeed()" spinner="ripple"></ion-refresher>
     <div class="list">
-      <a class="item item-icon-right" href="#" ng-repeat="item in items">
+      <a ui-sref="item({id: item.guid })" class="item item-icon-right" href="#" ng-repeat="item in items">
         <h2>{{ item.title }}</h2>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </a>

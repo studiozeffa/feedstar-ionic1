@@ -9,5 +9,11 @@ angular
       controller: 'FeedController',
     });
 
+    $stateProvider.state('item', {
+      url: '/items/:id',
+      templateUrl: 'html/item.html',
+      controller: 'ItemController'
+    });
+
     $urlRouterProvider.otherwise('/items');
   });
