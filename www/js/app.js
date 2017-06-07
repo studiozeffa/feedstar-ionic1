@@ -20,7 +20,15 @@ angular
         window.cordova.plugins.Keyboard.disableScroll(true);
       }
       if(window.StatusBar) {
-        window.StatusBar.styleDefault();
+        // Light text
+        window.StatusBar.styleLightContent();
+
+        if($ionicPlatform.is('android')) {
+          // Use the '700' tint for the status bar,
+          // to match the material design guidelines.
+          // Colour generated from http://mcg.mbitson.com/
+          window.StatusBar.backgroundColorByHexString('#8A0302');
+        }
       }
     });
   });
