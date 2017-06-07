@@ -6,7 +6,7 @@
         <img class="full-width" ng-src="{{ item.thumbnail }}">
       </div>
       <div class="item item-body item-text-wrap">
-        <p class="feed-item-content" ng-bind-html="item.description"></p>
+        <p class="feed-item-content" ng-bind-html="item.description" ng-click="handleDescriptionClick($event)"></p>
       </div>
       <a class="item item-icon-right positive" href="" ng-if="item.link" ng-click="openArticle(item.link)">
         <i class="icon ion-share"></i>

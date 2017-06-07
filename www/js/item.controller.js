@@ -11,4 +11,13 @@ angular
         $cordovaInAppBrowser.open(link, '_blank');
       });
     };
+
+    $scope.handleDescriptionClick = function($evt) {
+      // Intercept links and open them
+      // in the in-app browser.
+      if($evt.target.tagName === 'A') {
+        $evt.preventDefault();
+        $scope.openArticle($evt.target.href);
+      }
+    };
   });
