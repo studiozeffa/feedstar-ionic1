@@ -1,0 +1,22 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Feed Settings</h1>
+    <button class="button button-icon button-icon-small icon ion-checkmark-round" ng-click="changeFeed()"></button>
+  </ion-header-bar>
+  <ion-content>
+    <form>
+      <div class="list">
+        <label class="item item-input item-select">
+          <div class="input-label">Feed</div>
+          <select ng-model="feedSettings.url">
+            <option value="http://feeds.bbci.co.uk/news/rss.xml?edition=uk">BBC News</option>
+            <option value="http://feeds.bbci.co.uk/sport/rss.xml">BBC Sport</option>
+            <option value="http://jsfeeds.com/feed">JSFeeds</option>
+            <option value="http://feeds.feedburner.com/TechCrunch/">TechCrunch</option>
+            <option value="http://blog.ionic.io/feed/">Ionic Blog</option>
+          </select>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

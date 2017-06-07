@@ -1,5 +1,8 @@
 <ion-view>
   <ion-nav-title>{{ feed.title }}</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon button-icon-small icon ion-gear-b" ng-click="openFeedSettings()"></button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-refresher pulling-text="Refresh Feed..." on-refresh="refreshFeed()" spinner="ripple"></ion-refresher>
     <div class="list">
